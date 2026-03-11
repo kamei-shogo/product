@@ -9,6 +9,11 @@
       "matches": ["https://ou-idp.auth.osaka-u.ac.jp/idp/sso_redirect*"], // ここが重要
       "js": ["content.js"],
       "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://ou-idp.auth.osaka-u.ac.jp/idp/authnPwd*"],
+      "js": ["content_role_select.js"],
+      "run_at": "document_idle"
     }
   ]
 }
