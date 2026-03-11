@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "CLE自動ログイン",
+  "version": "1.0",
+  "description": "大阪大学IT認証基盤サービスに自動ログインします。",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ou-idp.auth.osaka-u.ac.jp/idp/sso_redirect*",
+        "https://ou-idp.auth.osaka-u.ac.jp/idp/authnPwd*",
+        "https://ou-idp.auth.osaka-u.ac.jp/idp/roleselect*",
+        "https://www.cle.osaka-u.ac.jp/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
